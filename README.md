@@ -38,8 +38,8 @@ The data access project is where all the code to send and retrieve data from the
 
 When creating a new entity you need to do the following steps in the Data Access:
 * Create a folder with the entity name inside the `Queries` Folder.
-* Create the required queries for the entity, remember you can use the [Demo Queries](./DataAccess/Interfaces/IDemoRepository.cs).
-* Build the [interface](./DataAccess/Interfaces) that will define which methods your repository is going to implement. This is an escential part for [Dependency Injection](#dependency-injection).
+* Create the required queries for the entity, remember you can use the [Demo Queries](./DataAccess/Queries/Demo).
+* Build the [interface](./DataAccess/Interfaces/IDemoRepository.cs) that will define which methods your repository is going to implement. This is an escential part for [Dependency Injection](#dependency-injection).
 * Create the Repository that is going to extend `BaseRepository` and implement the interface you created. Here is where you are going to have all your database code. You can take a look at the [DemoRepository](./DataAccess/Repositories/DemoRepository.cs).
 
 
