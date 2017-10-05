@@ -31,7 +31,7 @@ CREATE TABLE [dbo].[TableName]
 ## Entities Project
 The entities project contains POCOs (Plain Old C# Objects) matching the database tables.
 
-An example is the [DemoEntity](Entities/DemoEntity,cs).
+An example is the [DemoEntity](./Entities/DemoEntity.cs).
 
 ## Data Access Project
 The data access project is where all the code to send and retrieve data from the DB is.
