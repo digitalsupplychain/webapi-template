@@ -31,16 +31,16 @@ CREATE TABLE [dbo].[TableName]
 ## Entities Project
 The entities project contains POCOs (Plain Old C# Objects) matching the database tables.
 
-An example is the [DemoEntity](../Entities/DemoEntity,cs).
+An example is the [DemoEntity](../blob/master/Entities/DemoEntity,cs).
 
 ## Data Access Project
 The data access project is where all the code to send and retrieve data from the DB is.
 
 When creating a new entity you need to do the following steps in the Data Access:
 * Create a folder with the entity name inside the `Queries` Folder.
-* Create the required queries for the entity, remember you can use the [Demo Queries](/DataAccess/Interfaces/IDemoRepository.cs).
-* Build the [interface](/DataAccess/Interfaces) that will define which methods your repository is going to implement. This is an escential part for [Dependency Injection](#dependency-injection).
-* Create the Repository that is going to extend `BaseRepository` and implement the interface you created. Here is where you are going to have all your database code. You can take a look at the [DemoRepository](/DataAccess/Repositories/DemoRepository.cs).
+* Create the required queries for the entity, remember you can use the [Demo Queries](../blob/master/DataAccess/Interfaces/IDemoRepository.cs).
+* Build the [interface](../blob/master/DataAccess/Interfaces) that will define which methods your repository is going to implement. This is an escential part for [Dependency Injection](#dependency-injection).
+* Create the Repository that is going to extend `BaseRepository` and implement the interface you created. Here is where you are going to have all your database code. You can take a look at the [DemoRepository](../blob/master/DataAccess/Repositories/DemoRepository.cs).
 
 
 ## Services Project
@@ -62,7 +62,7 @@ DI is a pattern that solves the problem of having to create multiple instances o
 
 It doesn't matter if your API is going to be consumed by only one client, why would you ever need to create a new repository for each request when its serving the same methods, right?
 
-The dependency injection framework we are using in this project is Unity. its configuration, and where you are going to define your repositories is the [UnityConfig](/Services/App_Start/UnityConfig.cs).
+The dependency injection framework we are using in this project is Unity. its configuration, and where you are going to define your repositories is the [UnityConfig](../blob/master/Services/App_Start/UnityConfig.cs).
 
 Basically what you need to configure, is an instance of which class are you going to pass in as a parameter when the controllers request a certain interface.
 
